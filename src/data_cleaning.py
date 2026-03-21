@@ -14,10 +14,10 @@ INTERIM_DIR.mkdir(parents=True, exist_ok=True)
 
 
 # =========================================================
-# Variables to keep for the project
+# Variables kept for the project
 # =========================================================
+# WTI removed on purpose; Brent kept as main oil benchmark
 DAILY_VARS = [
-    "WTI futures",
     "Brent futures",
     "S&P500",
     "MSCI World",
@@ -59,14 +59,44 @@ def clean_text(x):
     return x
 
 
-def load_raw_csv(path):
-    return pd.read_csv(path, header=None)
-
-
-def build_clean_from_raw_csv(path, selected_vars, sheet_name):
+def parse_dates_strict(series: pd.Series) -> pd.Series:
     """
-    Structure expected in raw CSV:
-    row 0 = old column numbers (0,1,2,...)
+    Parse dates safely from raw csv.
+    Main expected format: YYYY-MM-DD HH:MM:SS
+    Fallback: YYYY-MM-DD
+    """
+    s = series.astype(str).str.strip()
+
+    dt = pd.to_datetime(
+        s,
+        format="%Y-%m-%d %H:%M:%S",
+        errors="coerce"
+    )
+
+    mask = dt.isna()
+    if mask.any():
+        dt2 = pd.to_datetime(
+            s[mask],
+            format="%Y-%m-%d",
+            errors="coerce"
+        )
+        dt.loc[mask] = dt2
+
+    return dt
+
+
+def load_raw_csv(path: Path) -> pd.DataFrame:
+    df = pd.read_csv(path, header=None)
+    df = df.replace("#N/A N/A", np.nan)
+    df = df.replace("#N/A", np.nan)
+    df = df.map(clean_text)
+    return df
+
+
+def build_clean_from_raw_csv(path: Path, selected_vars: list[str], sheet_name: str) -> pd.DataFrame:
+    """
+    Expected raw csv structure:
+    row 0 = old integer column names
     row 1 = Start Date
     row 2 = End Date
     row 3 = readable variable names
@@ -75,61 +105,58 @@ def build_clean_from_raw_csv(path, selected_vars, sheet_name):
     row 6 = Dates / PX_LAST
     row 7+ = actual data
     """
-    df_raw = load_raw_csv(path).copy()
-    df_raw = df_raw.replace("#N/A N/A", np.nan)
-    df_raw = df_raw.replace("#N/A", np.nan)
-    df_raw = df_raw.map(clean_text)
+    df_raw = load_raw_csv(path)
 
-    # Fixed structure from your raw csv
     NAMES_ROW = 3
-    DATE_MARKER_ROW = 6
+    MARKER_ROW = 6
     DATA_START_ROW = 7
 
-    # Column names from readable names row
     names = df_raw.iloc[NAMES_ROW].tolist()
+    markers = df_raw.iloc[MARKER_ROW].tolist()
 
-    # Find date column from row 'Dates, PX_LAST, ...'
-    marker_row = df_raw.iloc[DATE_MARKER_ROW].tolist()
-    try:
-        date_col_idx = marker_row.index("Dates")
-    except ValueError:
-        raise ValueError(f"[{sheet_name}] Could not find 'Dates' in row {DATE_MARKER_ROW}")
+    if "Dates" not in markers:
+        raise ValueError(f"[{sheet_name}] 'Dates' not found in marker row.")
+
+    date_col_idx = markers.index("Dates")
 
     columns = []
     for j, val in enumerate(names):
         if j == date_col_idx:
             columns.append("Date")
         else:
-            columns.append(val if pd.notna(val) and val != "" else f"Unnamed_{j}")
+            if pd.isna(val) or val == "":
+                columns.append(f"Unnamed_{j}")
+            else:
+                columns.append(val)
 
-    # Slice real data
     df = df_raw.iloc[DATA_START_ROW:].copy().reset_index(drop=True)
     df.columns = columns[: df.shape[1]]
 
     # Drop fully empty columns
     df = df.dropna(axis=1, how="all")
 
-    # Keep only useful columns that are present
+    # Rename one variable for consistency
+    rename_map = {
+        "High yield index yield to worst": "High yield index",
+    }
+    df = df.rename(columns=rename_map)
+
     available = [v for v in selected_vars if v in df.columns]
     missing = [v for v in selected_vars if v not in df.columns]
 
-    print(f"\n[{sheet_name}] Available variables kept: {available}")
+    print(f"\n[{sheet_name}] Variables kept: {available}")
     if missing:
         print(f"[{sheet_name}] Missing variables: {missing}")
 
     df = df[["Date"] + available].copy()
 
-    # Convert date
-    df["Date"] = pd.to_datetime(df["Date"], dayfirst=True, errors="coerce")
+    # Critical fix: explicit date parsing, no dayfirst guessing
+    df["Date"] = parse_dates_strict(df["Date"])
 
-    # Convert numerics
     for col in available:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    # Drop invalid dates
     df = df.dropna(subset=["Date"]).copy()
-
-    # Sort
     df = df.sort_values("Date").reset_index(drop=True)
 
     return df
@@ -148,7 +175,7 @@ for p in [daily_raw_path, monthly_raw_path, quarterly_raw_path]:
 
 
 # =========================================================
-# Clean datasets
+# Build clean datasets
 # =========================================================
 daily_clean = build_clean_from_raw_csv(daily_raw_path, DAILY_VARS, "Daily")
 monthly_clean = build_clean_from_raw_csv(monthly_raw_path, MONTHLY_VARS, "Monthly")
@@ -156,7 +183,7 @@ quarterly_clean = build_clean_from_raw_csv(quarterly_raw_path, QUARTERLY_VARS, "
 
 
 # =========================================================
-# Save clean datasets
+# Save
 # =========================================================
 daily_out = INTERIM_DIR / "daily_clean.csv"
 monthly_out = INTERIM_DIR / "monthly_clean.csv"

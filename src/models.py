@@ -9,7 +9,7 @@ df['Date'] = pd.to_datetime(df['Date'])
 df = df.sort_values('Date')
 
 # Returns
-df['r_oil'] = np.log(df['WTI futures'] / df['WTI futures'].shift(1))
+df['r_oil'] = np.log(df['Brent futures'] / df['Brent futures'].shift(1))
 df['r_sp500'] = np.log(df['S&P500'] / df['S&P500'].shift(1))
 
 # Volatility proxy

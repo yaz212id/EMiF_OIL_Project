@@ -1,0 +1,7 @@
+dependent_variable,model_name,n_obs,r_squared,adj_r_squared,aic,bic,n_regressors,regressors
+gold_vol_t1,gold_m6_cross_asset,9439,0.044564523934189304,0.0439567405524679,20403.643457951664,20453.71169520094,6,brent_pos_ret | oil_large_pos_shock | gold_vol_lag1 | spx_vol | us10y_vol | msci_vol
+gold_vol_t1,gold_m4_smoothed_large,9436,0.031917462047063916,0.031609547753821854,20513.535418605432,20542.14456836754,3,brent_pos_ma5 | oil_large_pos_shock | gold_vol_lag1
+gold_vol_t1,gold_m3_smoothed,9438,0.030972347559017566,0.030766936291939384,20527.632196637318,20549.089694754177,2,brent_pos_ma3 | gold_vol_lag1
+gold_vol_t1,gold_m5_interaction,9439,0.029732098839214904,0.029320706894690463,20545.051136870366,20580.814163476993,4,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large | gold_vol_lag1
+gold_vol_t1,gold_m2_large_shock,9439,0.029729399783212096,0.029420887668675788,20543.077393901163,20571.687815186462,3,brent_pos_ret | oil_large_pos_shock | gold_vol_lag1
+gold_vol_t1,gold_m1_baseline,9439,0.029404931271361567,0.029199209552682404,20544.233365343083,20565.69118130706,2,brent_pos_ret | gold_vol_lag1

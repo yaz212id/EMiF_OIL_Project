@@ -1,0 +1,7 @@
+dependent_variable,model_name,n_obs,r_squared,adj_r_squared,aic,bic,n_regressors,regressors
+hy_vol_t1,hy_m6_cross_asset,9439,0.09345767909323577,0.09288099822751894,-18307.493511094668,-18257.425273845394,6,brent_pos_ret | oil_large_pos_shock | hy_vol_lag1 | spx_vol | us10y_vol | gold_vol
+hy_vol_t1,hy_m4_smoothed_large,9436,0.06559647469625596,0.06529927255716439,-18019.63787580234,-17991.02872604023,3,brent_pos_ma5 | oil_large_pos_shock | hy_vol_lag1
+hy_vol_t1,hy_m3_smoothed,9438,0.059548576639035566,0.059349222866197926,-17966.16796717168,-17944.710469054822,2,brent_pos_ma3 | hy_vol_lag1
+hy_vol_t1,hy_m5_interaction,9439,0.05881842976700691,0.058419370377465585,-17957.54648760245,-17921.783460995823,4,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large | hy_vol_lag1
+hy_vol_t1,hy_m2_large_shock,9439,0.058777143136727994,0.05847786718859971,-17959.13243789273,-17930.522016607432,3,brent_pos_ret | oil_large_pos_shock | hy_vol_lag1
+hy_vol_t1,hy_m1_baseline,9439,0.058398360148961825,0.05819878370982434,-17957.33459834264,-17935.876782378666,2,brent_pos_ret | hy_vol_lag1

@@ -1,0 +1,28 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:       US GDP_growth_t1   R-squared:                       0.021
+Model:                            OLS   Adj. R-squared:                 -0.008
+Method:                 Least Squares   F-statistic:                    0.6874
+Date:                Thu, 26 Mar 2026   Prob (F-statistic):              0.602
+Time:                        17:23:42   Log-Likelihood:                -214.59
+No. Observations:                 142   AIC:                             439.2
+Df Residuals:                     137   BIC:                             454.0
+Df Model:                           4                                         
+Covariance Type:                  HAC                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+const                               0.6292      0.125      5.019      0.000       0.383       0.875
+brent_quarterly_ret_pos             0.0024      0.015      0.162      0.872      -0.026       0.031
+brent_quarterly_large_pos_shock     0.4901      0.663      0.739      0.460      -0.809       1.789
+brent_quarterly_ret_pos_lag1       -0.0068      0.006     -1.049      0.294      -0.019       0.006
+US GDP_growth_lag1                 -0.0178      0.100     -0.178      0.858      -0.214       0.178
+==============================================================================
+Omnibus:                      126.459   Durbin-Watson:                   2.191
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6770.093
+Skew:                          -2.492   Prob(JB):                         0.00
+Kurtosis:                      36.457   Cond. No.                         91.0
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 1 lags and without small sample correction

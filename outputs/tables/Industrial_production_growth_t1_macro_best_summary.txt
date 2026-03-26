@@ -1,0 +1,31 @@
+                                   OLS Regression Results                                  
+===========================================================================================
+Dep. Variable:     Industrial production_growth_t1   R-squared:                       0.132
+Model:                                         OLS   Adj. R-squared:                  0.113
+Method:                              Least Squares   F-statistic:                     2.829
+Date:                             Thu, 26 Mar 2026   Prob (F-statistic):            0.00708
+Time:                                     17:23:42   Log-Likelihood:                -498.79
+No. Observations:                              341   AIC:                             1014.
+Df Residuals:                                  333   BIC:                             1044.
+Df Model:                                        7                                         
+Covariance Type:                               HAC                                         
+=====================================================================================================
+                                        coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------
+const                                -0.1052      0.109     -0.961      0.337      -0.320       0.109
+brent_monthly_ret_pos                 0.0190      0.012      1.545      0.122      -0.005       0.043
+brent_monthly_large_pos_shock         0.2075      0.287      0.723      0.469      -0.355       0.770
+brent_monthly_ret_pos_lag1            0.0143      0.009      1.612      0.107      -0.003       0.032
+Industrial production_growth_lag1    -0.0668      0.106     -0.629      0.529      -0.275       0.141
+Manufacturing ISM_chg_lag1            0.0660      0.032      2.047      0.041       0.003       0.129
+US Retail Sales_growth_lag1           0.1849      0.085      2.182      0.029       0.019       0.351
+CFNAI Index_chg_lag1                  0.0131      0.050      0.263      0.792      -0.084       0.111
+==============================================================================
+Omnibus:                      437.124   Durbin-Watson:                   1.966
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            64514.096
+Skew:                          -5.745   Prob(JB):                         0.00
+Kurtosis:                      69.397   Cond. No.                         44.9
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 3 lags and without small sample correction

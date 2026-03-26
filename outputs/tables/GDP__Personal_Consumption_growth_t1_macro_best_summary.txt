@@ -1,0 +1,28 @@
+                                     OLS Regression Results                                     
+================================================================================================
+Dep. Variable:     GDP - Personal Consumption_growth_t1   R-squared:                       0.037
+Model:                                              OLS   Adj. R-squared:                  0.008
+Method:                                   Least Squares   F-statistic:                     1.280
+Date:                                  Thu, 26 Mar 2026   Prob (F-statistic):              0.281
+Time:                                          17:23:42   Log-Likelihood:                -224.01
+No. Observations:                                   142   AIC:                             458.0
+Df Residuals:                                       137   BIC:                             472.8
+Df Model:                                             4                                         
+Covariance Type:                                    HAC                                         
+==========================================================================================================
+                                             coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------
+const                                      0.5773      0.130      4.451      0.000       0.323       0.831
+brent_quarterly_ret_pos                    0.0072      0.017      0.415      0.678      -0.027       0.041
+brent_quarterly_large_pos_shock            0.7022      0.729      0.963      0.335      -0.726       2.131
+GDP - Personal Consumption_growth_lag1    -0.0634      0.154     -0.413      0.680      -0.365       0.238
+US GDP_growth_lag1                         0.0838      0.108      0.777      0.437      -0.128       0.295
+==============================================================================
+Omnibus:                      131.188   Durbin-Watson:                   2.178
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             8956.056
+Skew:                          -2.556   Prob(JB):                         0.00
+Kurtosis:                      41.569   Cond. No.                         83.3
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 1 lags and without small sample correction

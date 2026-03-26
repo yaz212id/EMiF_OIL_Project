@@ -1,0 +1,30 @@
+                                OLS Regression Results                               
+=====================================================================================
+Dep. Variable:     US Retail Sales_growth_t1   R-squared:                       0.040
+Model:                                   OLS   Adj. R-squared:                  0.023
+Method:                        Least Squares   F-statistic:                    0.7435
+Date:                       Thu, 26 Mar 2026   Prob (F-statistic):              0.615
+Time:                               17:23:42   Log-Likelihood:                -649.42
+No. Observations:                        341   AIC:                             1313.
+Df Residuals:                            334   BIC:                             1340.
+Df Model:                                  6                                         
+Covariance Type:                         HAC                                         
+=================================================================================================
+                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+const                             0.2594      0.095      2.744      0.006       0.074       0.445
+brent_monthly_ret_pos             0.0163      0.024      0.677      0.499      -0.031       0.063
+brent_monthly_large_pos_shock    -0.0734      0.372     -0.197      0.844      -0.803       0.657
+brent_monthly_ret_pos_lag1       -0.0059      0.014     -0.424      0.671      -0.033       0.021
+US Retail Sales_growth_lag1      -0.2017      0.139     -1.454      0.146      -0.474       0.070
+Manufacturing ISM_chg_lag1       -0.0440      0.089     -0.492      0.623      -0.219       0.131
+CFNAI Index_chg_lag1             -0.0121      0.048     -0.254      0.799      -0.105       0.081
+==============================================================================
+Omnibus:                      256.841   Durbin-Watson:                   2.365
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            24120.900
+Skew:                           2.313   Prob(JB):                         0.00
+Kurtosis:                      43.942   Cond. No.                         44.9
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 3 lags and without small sample correction

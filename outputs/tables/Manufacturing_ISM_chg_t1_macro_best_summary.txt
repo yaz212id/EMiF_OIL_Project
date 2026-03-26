@@ -1,0 +1,33 @@
+                               OLS Regression Results                               
+====================================================================================
+Dep. Variable:     Manufacturing ISM_chg_t1   R-squared:                       0.076
+Model:                                  OLS   Adj. R-squared:                  0.059
+Method:                       Least Squares   F-statistic:                     2.183
+Date:                      Thu, 26 Mar 2026   Prob (F-statistic):             0.0442
+Time:                              17:23:42   Log-Likelihood:                -663.35
+No. Observations:                       341   AIC:                             1341.
+Df Residuals:                           334   BIC:                             1368.
+Df Model:                                 6                                         
+Covariance Type:                        HAC                                         
+===========================================================================================================
+                                              coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------
+const                                      -0.3038      0.148     -2.047      0.041      -0.595      -0.013
+brent_monthly_ret_pos                       0.0620      0.028      2.220      0.026       0.007       0.117
+brent_monthly_large_pos_shock              -0.4981      0.548     -0.909      0.363      -1.572       0.575
+brent_monthly_ret_pos_lag1                  0.0138      0.020      0.689      0.491      -0.026       0.053
+Manufacturing ISM_chg_lag1                  0.0279      0.032      0.880      0.379      -0.034       0.090
+Manufacturing ISM - Price Paid_chg_lag1     0.0279      0.032      0.880      0.379      -0.034       0.090
+CFNAI Index_chg_lag1                       -0.1048      0.062     -1.680      0.093      -0.227       0.017
+US Retail Sales_growth_lag1                 0.1766      0.094      1.879      0.060      -0.008       0.361
+==============================================================================
+Omnibus:                       23.244   Durbin-Watson:                   1.992
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               61.149
+Skew:                          -0.260   Prob(JB):                     5.27e-14
+Kurtosis:                       5.008   Cond. No.                     2.29e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 3 lags and without small sample correction
+[2] The smallest eigenvalue is 3.58e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

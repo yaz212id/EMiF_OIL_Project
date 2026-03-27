@@ -1,2 +1,0 @@
-dependent_variable,best_model_name,best_r_squared,best_adj_r_squared,aic,bic,n_obs
-gold_vol_t1,gold_m6_cross_asset,0.04456452393419008,0.043956740552468676,20403.643457951664,20453.71169520094,9439

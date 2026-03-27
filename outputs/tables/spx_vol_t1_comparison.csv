@@ -1,7 +1,7 @@
 dependent_variable,model_name,n_obs,r_squared,adj_r_squared,aic,bic,n_regressors,regressors
-spx_vol_t1,spx_m6_cross_asset,9439,0.15590265272173742,0.15536569512168752,22003.15140333215,22053.219640581425,6,brent_pos_ret | oil_large_pos_shock | spx_vol_lag1 | msci_vol | hy_vol | us10y_vol
-spx_vol_t1,spx_m4_smoothed_large,9436,0.11108009195994195,0.11079735662023449,22481.15165317877,22509.76080294088,3,brent_pos_ma5 | oil_large_pos_shock | spx_vol_lag1
-spx_vol_t1,spx_m3_smoothed,9438,0.10911918900007311,0.10893034304119653,22502.90927017999,22524.366768296848,2,brent_pos_ma3 | spx_vol_lag1
-spx_vol_t1,spx_m5_interaction,9439,0.1079123190148421,0.10753407535107895,22521.09597765672,22556.859004263348,4,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large | spx_vol_lag1
-spx_vol_t1,spx_m2_large_shock,9439,0.10730508315279408,0.10702123739227032,22525.51883221614,22554.12925350144,3,brent_pos_ret | oil_large_pos_shock | spx_vol_lag1
-spx_vol_t1,spx_m1_baseline,9439,0.10675818753703481,0.10656886116728859,22529.299717724334,22550.75753368831,2,brent_pos_ret | spx_vol_lag1
+spx_vol_t1,spx_m6_cross_asset,9439,0.15590265272173698,0.15536569512168708,22003.15140333215,22053.219640581425,6,brent_pos_ret | oil_large_pos_shock | spx_vol_lag1 | msci_vol | hy_vol | us10y_vol
+spx_vol_t1,spx_m4_smoothed_large,9436,0.11108009195994184,0.11079735662023438,22481.151653178775,22509.760802940884,3,brent_pos_ma5 | oil_large_pos_shock | spx_vol_lag1
+spx_vol_t1,spx_m3_smoothed,9438,0.10911918900007322,0.10893034304119664,22502.90927017999,22524.366768296848,2,brent_pos_ma3 | spx_vol_lag1
+spx_vol_t1,spx_m5_interaction,9439,0.10791231901484222,0.10753407535107906,22521.095977656725,22556.85900426335,4,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large | spx_vol_lag1
+spx_vol_t1,spx_m2_large_shock,9439,0.10730508315279474,0.10702123739227098,22525.51883221614,22554.12925350144,3,brent_pos_ret | oil_large_pos_shock | spx_vol_lag1
+spx_vol_t1,spx_m1_baseline,9439,0.10675818753703492,0.1065688611672887,22529.299717724334,22550.75753368831,2,brent_pos_ret | spx_vol_lag1

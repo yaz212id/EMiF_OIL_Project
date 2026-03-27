@@ -1,0 +1,25 @@
+dependent_variable,model_name,spec_name,p,q,n_obs,pseudo_r_squared,aic,bic,n_regressors,regressors
+us10y_vol,"us10y_cross_asset_arma(2,2)",us10y_cross_asset,2,2,9441,0.5200727405425158,-41378.38899273255,-41299.7114996374,5,brent_pos_ret | oil_large_pos_shock | us2y_vol | spx_vol | hy_vol
+us10y_vol,"us10y_cross_asset_arma(1,2)",us10y_cross_asset,1,2,9441,0.5198916492834726,-41378.70079244544,-41307.17579872257,5,brent_pos_ret | oil_large_pos_shock | us2y_vol | spx_vol | hy_vol
+us10y_vol,"us10y_cross_asset_arma(1,1)",us10y_cross_asset,1,1,9441,0.5198466746904783,-41384.568897686455,-41320.19544979453,5,brent_pos_ret | oil_large_pos_shock | us2y_vol | spx_vol | hy_vol
+us10y_vol,"us10y_cross_asset_arma(2,1)",us10y_cross_asset,2,1,9441,0.5192326180907647,-41370.35438861074,-41298.82833539749,5,brent_pos_ret | oil_large_pos_shock | us2y_vol | spx_vol | hy_vol
+us10y_vol,"us10y_cross_asset_arma(2,0)",us10y_cross_asset,2,0,9441,0.49601325237624017,-40926.78071356338,-40862.407265671456,5,brent_pos_ret | oil_large_pos_shock | us2y_vol | spx_vol | hy_vol
+us10y_vol,"us10y_cross_asset_arma(1,0)",us10y_cross_asset,1,0,9441,0.4919605775391591,-40858.50651757557,-40801.28482750246,5,brent_pos_ret | oil_large_pos_shock | us2y_vol | spx_vol | hy_vol
+us10y_vol,"us10y_interaction_arma(2,1)",us10y_interaction,2,1,9441,0.08085326983280483,-35255.14278753943,-35197.92194496883,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+us10y_vol,"us10y_baseline_arma(2,1)",us10y_baseline,2,1,9441,0.0808446488807868,-35257.06118395498,-35206.99294670571,2,brent_pos_ret | oil_large_pos_shock
+us10y_vol,"us10y_interaction_arma(1,1)",us10y_interaction,1,1,9441,0.08082559691305724,-35256.87071472406,-35206.80247747478,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+us10y_vol,"us10y_baseline_arma(1,1)",us10y_baseline,1,1,9441,0.08081587071360496,-35258.78100324441,-35215.86537131646,2,brent_pos_ret | oil_large_pos_shock
+us10y_vol,"us10y_smoothed_arma(1,2)",us10y_smoothed,1,2,9439,0.08078770187403672,-35243.013435029956,-35192.947422946265,2,brent_pos_ma3 | oil_large_pos_shock
+us10y_vol,"us10y_smoothed_arma(2,1)",us10y_smoothed,2,1,9439,0.08075463361421498,-35247.0377379547,-35196.97098407055,2,brent_pos_ma3 | oil_large_pos_shock
+us10y_vol,"us10y_smoothed_arma(1,1)",us10y_smoothed,1,1,9439,0.08072416003752036,-35248.72746510741,-35205.81310463529,2,brent_pos_ma3 | oil_large_pos_shock
+us10y_vol,"us10y_baseline_arma(2,2)",us10y_baseline,2,2,9441,0.07666901379120006,-35211.600736134016,-35154.38074115573,2,brent_pos_ret | oil_large_pos_shock
+us10y_vol,"us10y_baseline_arma(1,2)",us10y_baseline,1,2,9441,0.0637778094476309,-35015.73661066065,-34965.66911505465,2,brent_pos_ret | oil_large_pos_shock
+us10y_vol,"us10y_smoothed_arma(2,2)",us10y_smoothed,2,2,9439,0.0628976963320973,-35053.77400660416,-34996.55570707994,2,brent_pos_ma3 | oil_large_pos_shock
+us10y_vol,"us10y_interaction_arma(1,2)",us10y_interaction,1,2,9441,0.052955911692708746,-34969.161795503926,-34911.94180052564,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+us10y_vol,"us10y_interaction_arma(2,2)",us10y_interaction,2,2,9441,0.04680276330877331,-34901.88014137012,-34837.50764701954,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+us10y_vol,"us10y_interaction_arma(2,0)",us10y_interaction,2,0,9441,0.029473148832686702,-34744.019088194575,-34693.9508509453,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+us10y_vol,"us10y_baseline_arma(2,0)",us10y_baseline,2,0,9441,0.02945220377534885,-34745.817388061725,-34702.901756133775,2,brent_pos_ret | oil_large_pos_shock
+us10y_vol,"us10y_smoothed_arma(2,0)",us10y_smoothed,2,0,9439,0.029158634628993596,-34735.26908046006,-34692.35471998793,2,brent_pos_ma3 | oil_large_pos_shock
+us10y_vol,"us10y_interaction_arma(1,0)",us10y_interaction,1,0,9441,0.017066744088295227,-34630.76504695476,-34587.84877939992,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+us10y_vol,"us10y_smoothed_arma(1,0)",us10y_smoothed,1,0,9439,0.01697587316325977,-34623.77232401169,-34588.00982715026,2,brent_pos_ma3 | oil_large_pos_shock
+us10y_vol,"us10y_baseline_arma(1,0)",us10y_baseline,1,0,9441,0.016961262274875377,-34631.758309263234,-34595.994752967534,2,brent_pos_ret | oil_large_pos_shock

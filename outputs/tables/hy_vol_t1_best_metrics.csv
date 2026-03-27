@@ -1,0 +1,2 @@
+dependent_variable,best_model_name,best_r_squared,best_adj_r_squared,aic,bic,n_obs
+hy_vol_t1,hy_m6_cross_asset,0.09345767909323544,0.09288099822751861,-18307.493511094668,-18257.425273845394,9439

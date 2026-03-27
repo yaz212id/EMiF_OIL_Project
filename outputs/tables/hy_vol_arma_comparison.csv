@@ -1,0 +1,25 @@
+dependent_variable,model_name,spec_name,p,q,n_obs,pseudo_r_squared,aic,bic,n_regressors,regressors
+hy_vol,"hy_cross_asset_arma(2,1)",hy_cross_asset,2,1,9441,0.1708439006723086,-19141.50136975966,-19069.97531654641,5,brent_pos_ret | oil_large_pos_shock | spx_vol | us10y_vol | gold_vol
+hy_vol,"hy_cross_asset_arma(1,2)",hy_cross_asset,1,2,9441,0.1671665428513004,-19097.5125814513,-19025.98758772844,5,brent_pos_ret | oil_large_pos_shock | spx_vol | us10y_vol | gold_vol
+hy_vol,"hy_cross_asset_arma(2,2)",hy_cross_asset,2,2,9441,0.16499748358448096,-19071.183104475065,-18992.505611379915,5,brent_pos_ret | oil_large_pos_shock | spx_vol | us10y_vol | gold_vol
+hy_vol,"hy_baseline_arma(2,2)",hy_baseline,2,2,9441,0.1614311839890732,-19035.574958208468,-18978.354963230177,2,brent_pos_ret | oil_large_pos_shock
+hy_vol,"hy_smoothed_arma(2,2)",hy_smoothed,2,2,9439,0.16059410279184239,-19020.410234324874,-18963.191934800652,2,brent_pos_ma3 | oil_large_pos_shock
+hy_vol,"hy_cross_asset_arma(1,1)",hy_cross_asset,1,1,9441,0.16004128970637632,-19023.104065858523,-18958.730617966597,5,brent_pos_ret | oil_large_pos_shock | spx_vol | us10y_vol | gold_vol
+hy_vol,"hy_interaction_arma(2,1)",hy_interaction,2,1,9441,0.15785665519665837,-18999.058275851643,-18941.83743328104,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+hy_vol,"hy_baseline_arma(2,1)",hy_baseline,2,1,9441,0.15785615407988018,-19001.05313221671,-18950.984894967438,2,brent_pos_ret | oil_large_pos_shock
+hy_vol,"hy_smoothed_arma(2,1)",hy_smoothed,2,1,9439,0.157641054577907,-18993.096139637655,-18943.029385753507,2,brent_pos_ma3 | oil_large_pos_shock
+hy_vol,"hy_cross_asset_arma(2,0)",hy_cross_asset,2,0,9441,0.153827153160073,-18953.99980169165,-18889.626353799726,5,brent_pos_ret | oil_large_pos_shock | spx_vol | us10y_vol | gold_vol
+hy_vol,"hy_interaction_arma(1,2)",hy_interaction,1,2,9441,0.153624581065944,-18949.158074048963,-18891.93807907067,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+hy_vol,"hy_baseline_arma(1,2)",hy_baseline,1,2,9441,0.15362188896373086,-18951.126064321237,-18901.058568715234,2,brent_pos_ret | oil_large_pos_shock
+hy_vol,"hy_smoothed_arma(1,2)",hy_smoothed,1,2,9439,0.1534423974986464,-18943.55327627684,-18893.487264193147,2,brent_pos_ma3 | oil_large_pos_shock
+hy_vol,"hy_interaction_arma(2,2)",hy_interaction,2,2,9441,0.15007396414778706,-18907.49863153801,-18843.12613718743,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+hy_vol,"hy_interaction_arma(1,1)",hy_interaction,1,1,9441,0.14183508591423744,-18824.503820779064,-18774.43558352979,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+hy_vol,"hy_baseline_arma(1,1)",hy_baseline,1,1,9441,0.14183377440006162,-18826.489386479552,-18783.573754551602,2,brent_pos_ret | oil_large_pos_shock
+hy_vol,"hy_smoothed_arma(1,1)",hy_smoothed,1,1,9439,0.1414450166412773,-18816.61893210048,-18773.70457162835,2,brent_pos_ma3 | oil_large_pos_shock
+hy_vol,"hy_cross_asset_arma(1,0)",hy_cross_asset,1,0,9441,0.14079298276202123,-18814.65328660194,-18757.431596528826,5,brent_pos_ret | oil_large_pos_shock | spx_vol | us10y_vol | gold_vol
+hy_vol,"hy_interaction_arma(2,0)",hy_interaction,2,0,9441,0.13043420449443932,-18700.544255570832,-18650.47601832156,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+hy_vol,"hy_smoothed_arma(2,0)",hy_smoothed,2,0,9439,0.13039622536241668,-18696.636238263076,-18653.721877790947,2,brent_pos_ma3 | oil_large_pos_shock
+hy_vol,"hy_baseline_arma(2,0)",hy_baseline,2,0,9441,0.13028254549615026,-18700.893510340866,-18657.977878412916,2,brent_pos_ret | oil_large_pos_shock
+hy_vol,"hy_smoothed_arma(1,0)",hy_smoothed,1,0,9439,0.11275717119595652,-18511.988788768733,-18476.2262919073,2,brent_pos_ma3 | oil_large_pos_shock
+hy_vol,"hy_interaction_arma(1,0)",hy_interaction,1,0,9441,0.11186059440087659,-18505.872172301173,-18462.955904746337,3,brent_pos_ret | oil_large_pos_shock | brent_pos_x_large
+hy_vol,"hy_baseline_arma(1,0)",hy_baseline,1,0,9441,0.11160594128692491,-18505.170748315657,-18469.40719201996,2,brent_pos_ret | oil_large_pos_shock

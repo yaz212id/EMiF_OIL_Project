@@ -1,0 +1,30 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             spx_vol_t1   R-squared:                       0.156
+Model:                            OLS   Adj. R-squared:                  0.155
+Method:                 Least Squares   F-statistic:                     26.97
+Date:                Thu, 26 Mar 2026   Prob (F-statistic):           4.68e-32
+Time:                        16:35:54   Log-Likelihood:                -10995.
+No. Observations:                9439   AIC:                         2.200e+04
+Df Residuals:                    9432   BIC:                         2.205e+04
+Df Model:                           6                                         
+Covariance Type:                  HAC                                         
+=======================================================================================
+                          coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+const                   0.3600      0.028     12.650      0.000       0.304       0.416
+brent_pos_ret          -0.0066      0.011     -0.601      0.548      -0.028       0.015
+oil_large_pos_shock     0.0872      0.055      1.574      0.116      -0.021       0.196
+spx_vol_lag1            0.2524      0.025     10.140      0.000       0.204       0.301
+msci_vol                0.2079      0.028      7.454      0.000       0.153       0.263
+hy_vol                  0.9447      0.231      4.086      0.000       0.492       1.398
+us10y_vol               0.3599      0.263      1.370      0.171      -0.155       0.875
+==============================================================================
+Omnibus:                     5480.421   Durbin-Watson:                   2.068
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            90133.931
+Skew:                           2.459   Prob(JB):                         0.00
+Kurtosis:                      17.318   Cond. No.                         50.5
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 5 lags and without small sample correction

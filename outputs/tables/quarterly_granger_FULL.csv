@@ -1,0 +1,8 @@
+window,target,var_lags_bic,n_obs,p_oil_granger_gdp,oil_causes_gdp,p_gdp_granger_oil,gdp_causes_oil
+FULL,US GDP_growth,1,143,0.3988449082783567,No,1.2235154223255102e-06,Yes
+FULL,GDP - Personal Consumption_growth,1,143,0.39688242558491116,No,7.710046066461154e-07,Yes
+FULL,GDP - Goods Consumption_growth,1,143,0.08941365776994653,Yes,0.02331864271217908,Yes
+FULL,GDP - Durable Goods Consumption_growth,1,143,0.19328476658092705,No,0.0882350449183315,Yes
+FULL,GDP - Non durable Goods_growth,2,142,0.06345886316540927,Yes,0.00244032522160115,Yes
+FULL,GDP - Service_growth,1,143,0.7437485103104089,No,2.494469289140191e-05,Yes
+FULL,GDP - Investment_growth,1,143,0.3484991237464191,No,0.001464193177431056,Yes

@@ -1,8 +1,0 @@
-target,window,model,n_obs,n_regressors,r_squared,adj_r_squared,aic,bic,rmse,mae,regressors
-GDP - Durable Goods Consumption_growth,FOCUS,M5_full,44,6,0.22558582206017563,0.1000051445564204,192.85609158867516,205.34541902610297,1.8469156897232437,1.338060417963866,oil_pos | oil_large_shock | oil_pos_lag1 | oil_pos_lag2 | oil_pos_x_large | GDP - Durable Goods Consumption_growth_lag1
-GDP - Goods Consumption_growth,FOCUS,M5_full,44,6,0.17953634575091648,0.04648818560241652,114.84476201879806,127.3340894562259,0.7611115652026798,0.580886836970005,oil_pos | oil_large_shock | oil_pos_lag1 | oil_pos_lag2 | oil_pos_x_large | GDP - Goods Consumption_growth_lag1
-GDP - Investment_growth,FOCUS,M1_baseline,44,2,0.012571067118855694,-0.03559619789973678,205.788926793616,211.1414956953708,2.342901644877308,1.8615114845248948,oil_pos | GDP - Investment_growth_lag1
-GDP - Non durable Goods_growth,FOCUS,M3_oil_lags,44,4,0.12949517033472757,0.04021262370239187,80.27110503828463,89.19205320787594,0.5377275559425533,0.39740468658317235,oil_pos | oil_pos_lag1 | oil_pos_lag2 | GDP - Non durable Goods_growth_lag1
-GDP - Personal Consumption_growth,FOCUS,M2_large_shock,44,3,0.10581282631861733,0.038748788292513714,47.91890506919394,55.055663604866986,0.3808633567196924,0.3055689206624485,oil_pos | oil_large_shock | GDP - Personal Consumption_growth_lag1
-GDP - Service_growth,FOCUS,M1_baseline,44,2,0.17749298558411175,0.13737069219797082,18.803097955172547,24.15566685692733,0.2798647624574603,0.23354640349433123,oil_pos | GDP - Service_growth_lag1
-US GDP_growth,FOCUS,M1_baseline,44,2,0.09781818180401869,0.0538093126237269,64.58254008495001,69.93510898670479,0.47084428231714026,0.379845741418133,oil_pos | US GDP_growth_lag1
